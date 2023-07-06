@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState("Home");
   function renderPage() {
