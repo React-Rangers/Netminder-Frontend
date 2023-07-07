@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState("Home");
+  const [currentPage, setCurrentPage] = useState('Home');
   function renderPage() {
-    if (currentPage === "Home") {
+    if (currentPage === 'Home') {
       return <Home />;
     }
-    if (currentPage === "Dashboard") {
+    if (currentPage === 'Dashboard') {
       return <Dashboard />;
     }
   }
@@ -22,4 +22,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App
