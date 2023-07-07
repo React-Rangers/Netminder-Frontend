@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Placeholder from "./pages/Dashboard";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState("Home");
   function renderPage() {
-    if (currentPage === 'Home') {
+    if (currentPage === "Home") {
       return <Home />;
     }
-    if (currentPage === 'Placeholder') {
+    if (currentPage === "Placeholder") {
       return <Placeholder />;
     }
   }
@@ -21,4 +21,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
