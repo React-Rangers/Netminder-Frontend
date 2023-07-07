@@ -1,6 +1,6 @@
 import React from 'react';
 // import Dashboard from '../pages/Dashboard';
-import Dashboard from '../pages/Dashboard';
+import Placeholder from '../pages/Dashboard';
 
 const Navbar = ({ setCurrentPage }) => {
   return (
@@ -18,7 +18,6 @@ const Navbar = ({ setCurrentPage }) => {
         </div>
       </div>
     </nav>
-
   )
 }
 

@@ -97,11 +97,6 @@ const Placeholder = () => {
   return <Calendar cellRender={cellRender} />;
 };
 
-
-
-
-
-
 // const Dashboard = () => {
 //     return(
 //         <section>
