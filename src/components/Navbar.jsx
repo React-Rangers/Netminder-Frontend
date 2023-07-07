@@ -1,4 +1,5 @@
 import React from 'react';
+// import Dashboard from '../pages/Dashboard';
 import Dashboard from '../pages/Dashboard';
 
 const Navbar = ({ setCurrentPage }) => {
@@ -12,7 +13,7 @@ const Navbar = ({ setCurrentPage }) => {
         <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
           <div className='navbar-nav'>
             <a onClick={() => setCurrentPage('Home')} className='nav-link active' aria-current='page' href='#'>Home</a>
-            <a onClick={() => setCurrentPage('Dashboard')} className='nav-link' href='#'>Dashboard</a>
+            <a onClick={() => setCurrentPage('Placeholder')} className='nav-link' href='#'>Dashboard</a>
           </div>
         </div>
       </div>
