@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { ADD_TASK } from '../utils/mutations';
 
 const Task = () => {
     // The states that will access the form data
-    const [description, setDescription] = useState('');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [emailAddress, setEmailAddress] = useState('');
-    const [contactDate, setContactDate] = useState('');
+    const [description, setDescription] = useState();
+    const [firstName, setFirstName] = useState();
+    const [lastName, setLastName] = useState();
+    const [phoneNumber, setPhoneNumber] = useState();
+    const [emailAddress, setEmailAddress] = useState();
+    const [contactDate, setContactDate] = useState();
 
 
     const [addTask, { error }] = useMutation(ADD_TASK);
