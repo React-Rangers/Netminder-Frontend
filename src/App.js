@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Placeholder from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -9,8 +9,8 @@ const App = () => {
     if (currentPage === "Home") {
       return <Home />;
     }
-    if (currentPage === "Placeholder") {
-      return <Placeholder />;
+    if (currentPage === "Dashboard") {
+      return <Dashboard />;
     }
   }
   return (
