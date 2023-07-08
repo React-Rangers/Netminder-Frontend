@@ -1,5 +1,7 @@
 import React from 'react';
 import Dashboard from '../pages/Dashboard';
+import LoginForm from '../pages/LoginForm';
+import SignUpForm from '../pages/SignUpForm';
 
 
 const Navbar = ({ setCurrentPage }) => {
@@ -13,7 +15,9 @@ const Navbar = ({ setCurrentPage }) => {
         <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
           <div className='navbar-nav'>
             <a onClick={() => setCurrentPage('Home')} className='nav-link active' aria-current='page' href='#'>Home</a>
-            <a onClick={() => setCurrentPage('Dashboard')} className='nav-link' href='#'>Dashboard</a>
+            {/* <a onClick={() => setCurrentPage('Dashboard')} className='nav-link' href='#'>Dashboard</a> */}
+          <a onClick={() => setCurrentPage('LoginForm')} className='nav-link' href='#'>Login</a>
+          <a onClick={() => setCurrentPage('SignUpForm')} className='nav-link' href='#'>Sign Up</a>
           </div>
         </div>
       </div>
