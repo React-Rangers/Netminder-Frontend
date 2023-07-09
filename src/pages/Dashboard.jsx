@@ -1,5 +1,5 @@
 import CalendarDisplay from "../components/Calendar";
-// import Reminders from '../../../../test/Reminders'
+import Reminders from '../components/Reminders'
 
 const Dashboard = () => {
   return (
@@ -14,11 +14,11 @@ const Dashboard = () => {
           <CalendarDisplay />
         </div>
       </body>
-      {/* <column>
+      <column>
         <div>
           <Reminders />
         </div>
-      </column> */}
+      </column>
     </section>
   )
 }
