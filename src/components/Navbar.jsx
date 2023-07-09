@@ -16,8 +16,8 @@ const Navbar = ({ setCurrentPage }) => {
           <div className='navbar-nav'>
             <a onClick={() => setCurrentPage('Home')} className='nav-link active' aria-current='page' href='#'>Home</a>
             {/* <a onClick={() => setCurrentPage('Dashboard')} className='nav-link' href='#'>Dashboard</a> */}
-          <a onClick={() => setCurrentPage('LoginForm')} className='nav-link' href='#'>Login</a>
-          <a onClick={() => setCurrentPage('SignUpForm')} className='nav-link' href='#'>Sign Up</a>
+            <a onClick={() => setCurrentPage('LoginForm')} className='nav-link' href='#'>Login</a>
+            <a onClick={() => setCurrentPage('SignUpForm')} className='nav-link' href='#'>Sign Up</a>
           </div>
         </div>
       </div>
