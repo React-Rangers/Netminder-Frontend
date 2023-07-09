@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
-import { ADD_PROFILE } from "../utils/mutations";
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_PROFILE } from '../utils/mutations';
 
 const SignUpForm = () => {
 

@@ -1,4 +1,4 @@
-import CalendarDisplay from "../components/Calendar";
+import CalendarDisplay from '../components/Calendar';
 import Reminders from '../components/Reminders'
 
 const Dashboard = () => {
