@@ -4,9 +4,10 @@ const Home = () => {
     return (
         <section>
             <div>
-                <p>
+            <img src={require('../images/netminder-logo.png')} alt="Netminder"></img>
+                <h1>
                     Home
-                </p>
+                </h1>
             </div>
         </section>
     )
