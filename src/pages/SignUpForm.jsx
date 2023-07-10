@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
-import { ADD_PROFILE } from "../utils/mutations";
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_PROFILE } from '../utils/mutations';
 
 const SignUpForm = () => {
 
@@ -31,7 +31,7 @@ const SignUpForm = () => {
             <h3>Sign Up</h3>
             <form>
                 <div className='mb-3'>
-                    <label for='inputUsernameSignUp' className='form-label'>Email address</label>
+                    <label for='inputUsernameSignUp' className='form-label'>Username</label>
                     <input
                         type='username'
                         className='form-control'

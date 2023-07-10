@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
-import LoginForm from "./pages/LoginForm";
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import LoginForm from './pages/LoginForm';
+import SignUpForm from './pages/SignUpForm';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 const client = new ApolloClient({
@@ -10,16 +11,13 @@ const client = new ApolloClient({
 });
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState("Home");
+  const [currentPage, setCurrentPage] = useState('Home');
   function renderPage() {
-    if (currentPage === "Home") {
+    if (currentPage === 'Home') {
       return <Home />;
     }
-    if (currentPage === "Dashboard") {
+    if (currentPage === 'Dashboard') {
       return <Dashboard />;
-    }
-    if (currentPage === 'LoginForm') {
-      return <LoginForm />
     }
   }
   return (
