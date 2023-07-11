@@ -1,12 +1,12 @@
 import React from 'react'
-import genereateSinglePicker from 'antd'
+import { DatePicker } from 'antd'
 
-function DatepickerDisplay() {
+function DatePickerDisplay() {
     return (
         <div>
-            <generateSinglePicker />
+            <DatePicker />
         </div>
     )
 }
 
-export default DatepickerDisplay
+export default DatePickerDisplay

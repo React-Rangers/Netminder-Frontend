@@ -1,6 +1,6 @@
 import CalendarDisplay from '../components/Calendar';
 import Reminders from '../components/Reminders'
-import DatepickerDisplay from '../components/Datepicker'
+import DatePickerDisplay from '../components/Datepicker'
 
 const Dashboard = () => {
   return (
@@ -22,7 +22,7 @@ const Dashboard = () => {
       </column>
       <column>
         <div>
-          <DatepickerDisplay />
+          <DatePickerDisplay />
         </div>
       </column>
     </section>
