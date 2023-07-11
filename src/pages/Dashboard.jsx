@@ -1,5 +1,5 @@
-import CalendarDisplay from '../components/Calendar';
-import Reminders from '../components/Reminders'
+// import CalendarDisplay from '../components/Calendar';
+import TaskTable from '../components/TaskTable'
 import DatePickerDisplay from '../components/Datepicker'
 
 const Dashboard = () => {
@@ -12,12 +12,12 @@ const Dashboard = () => {
       </div>
       <body>
         <div>
-          <CalendarDisplay />
+          {/* <CalendarDisplay /> */}
         </div>
       </body>
       <column>
         <div>
-          <Reminders />
+          <TaskTable />
         </div>
       </column>
       <column>
