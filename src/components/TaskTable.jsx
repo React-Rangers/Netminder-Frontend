@@ -3,19 +3,18 @@ import { Table } from 'antd'
 import { useQuery } from '@apollo/client';
 
 function TaskTable() {
+  const query = useQuery(GET_TASKS);
   const dataSource = [
     {
-      key: '1',
-      name: 'Mike',
-      age: 32,
-      address: '10 Downing Street',
+      key: query._id,
+      contactEmail: query.contactEmail,
+      contactFirstName: query.contactFirstName,
+      contactLastName: query.contactLastName,
+      contactPhoneNumber: query.contactPhoneNumber,
+      reminderDate: query.reminderDate,
+      taskDescription: query.taskDescription,
     },
-    {
-      key: '2',
-      name: 'John',
-      age: 42,
-      address: '10 Downing Street',
-    },
+  
   ];
 
   const columns = [
@@ -50,9 +49,6 @@ function TaskTable() {
       key: 'taskDescription',
     },
   ];
-  function taskQueryHandler() {
-    const query = useQuery(GET_TASKS);
-  }
 
   <Table dataSource={dataSource} columns={columns} />;
   return (
