@@ -1,3 +1,37 @@
+// import React, { useState } from 'react';
+// import { Calendar } from 'antd';
+// import moment from 'moment';
+
+// const CalendarDisplay = () => {
+//   const [taskList, setTaskList] = useState([]);
+
+//   // Function to handle date cell click event
+//   const handleDateCellClick = (date) => {
+//     // Show your task form and get the task data
+//     const taskData = getTaskDataFromForm(); // Replace with your own logic
+
+//     // Append the task to the task list
+//     setTaskList([...taskList, { date, taskData }]);
+//   };
+
+//   return (
+//     <Calendar
+//       dateCellRender={(date) => (
+//         <div>
+//           {taskList.map((task) =>
+//             moment(task.date).isSame(date, 'day') ? (
+//               <div key={task.date}>{task.taskData}</div>
+//             ) : null
+//           )}
+//         </div>
+//       )}
+//       onDateCellClick={handleDateCellClick}
+//     />
+//   );
+// };
+
+// export default CalendarDisplay;
+
 import React,{useState} from "react"
 import {Calendar} from "antd"
 import dayjs from "dayjs";
@@ -91,7 +125,7 @@ function CalendarDisplay() {
     )
 }
 
-// export default CalendarDisplay
+export default CalendarDisplay
 
 
 // import { uniq } from "lodash";
@@ -178,4 +212,4 @@ function CalendarDisplay() {
 // const uniqueDaysWithTasks = uniq([getDaysOfCurrentMonth, true]);
 
 
-export default CalendarDisplay
+// export default CalendarDisplay
