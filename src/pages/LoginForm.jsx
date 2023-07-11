@@ -19,6 +19,7 @@ const LoginForm = () => {
                     password
                 }
             })
+            console.log('Succesful login!')
         } catch (err) {
             console.error(err);
         }
@@ -29,7 +30,7 @@ const LoginForm = () => {
             <h3>Login</h3>
             <form>
                 <div className='mb-3'>
-                    <label for='exampleInputEmail1' className='form-label'>Email address</label>
+                    <label htmlFor='exampleInputEmail1' className='form-label'>Email address</label>
                     <input
                         type='email'
                         className='form-control'
@@ -39,7 +40,7 @@ const LoginForm = () => {
                     />
                 </div>
                 <div className='mb-3'>
-                    <label for='exampleInputPassword1' className='form-label'>Password</label>
+                    <label htmlFor='exampleInputPassword1' className='form-label'>Password</label>
                     <input
                         type='password'
                         className='form-control'

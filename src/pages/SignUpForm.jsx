@@ -14,13 +14,15 @@ const SignUpForm = () => {
         e.preventDefault();
 
         try {
-            const { data } = await addProfile({
+            await addProfile({
                 variables: {
                     username,
                     email,
                     password
                 }
             })
+            console.log('new profile made');
+
         } catch (err) {
             console.error(err);
         }
@@ -31,7 +33,7 @@ const SignUpForm = () => {
             <h3>Sign Up</h3>
             <form>
                 <div className='mb-3'>
-                    <label for='inputUsernameSignUp' className='form-label'>Username</label>
+                    <label htmlFor='inputUsernameSignUp' className='form-label'>Username</label>
                     <input
                         type='username'
                         className='form-control'
@@ -42,7 +44,7 @@ const SignUpForm = () => {
                 </div>
 
                 <div className='mb-3'>
-                    <label for='inputEmailSignup' className='form-label'>Email address</label>
+                    <label htmlFor='inputEmailSignup' className='form-label'>Email address</label>
                     <input
                         type='email'
                         className='form-control'
@@ -53,7 +55,7 @@ const SignUpForm = () => {
                 </div>
 
                 <div className='mb-3'>
-                    <label for='inputPasswordSignUp' className='form-label'>Password</label>
+                    <label htmlFor='inputPasswordSignUp' className='form-label'>Password</label>
                     <input
                         type='password'
                         className='form-control'

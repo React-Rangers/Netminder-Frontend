@@ -5,7 +5,7 @@ import { USER_TASKS } from '../utils/queries';
 
 function TaskTable() {
   const query = useQuery(USER_TASKS);
-  const dataSource = query.map(task => ({
+  const dataSource = query.data.profiles.tasks.map(task => ({
     key: task._id,
     contactEmail: task.contactEmail,
     contactFirstName: task.contactFirstName,
