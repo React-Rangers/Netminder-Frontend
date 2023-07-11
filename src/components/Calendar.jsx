@@ -87,7 +87,7 @@ function CalendarDisplay() {
         // }}
         
         />
-       </div> 
+       </div>
     )
 }
 
