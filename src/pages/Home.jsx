@@ -1,15 +1,13 @@
 import React from 'react'
-import LoginForm from '../pages/LoginForm'
-import SignUpForm from '../pages/SignUpForm'
 
-const Home = ({ setCurrentPage }) => {
+const Home = () => {
     return (
         <section>
             <br></br>
             <div className='main-section'>
                 <img className='main-logo' src={require('../images/netminder-logo.png')} alt="Netminder"></img>
                 <br></br>
-                <a onClick={() => setCurrentPage('LoginForm')} href='/Login'><button>Login</button></a> <a onClick={() => setCurrentPage('SignUpForm')} href='/Signup'><button>Sign Up</button></a>
+                <button>Login</button><button>Sign Up</button>
             </div>
         </section>
     )
