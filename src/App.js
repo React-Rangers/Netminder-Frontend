@@ -20,6 +20,12 @@ const App = () => {
     if (currentPage === "Dashboard") {
       return <Dashboard />;
     }
+    if (currentPage === 'LoginForm') {
+      return <LoginForm />
+    }
+    if (currentPage === 'SignUpForm') {
+      return <SignUpForm />
+    }
   }
   return (
     <ApolloProvider client={client}>
