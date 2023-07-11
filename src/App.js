@@ -4,11 +4,8 @@ import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import LoginForm from './pages/LoginForm';
 import SignUpForm from './pages/SignUpForm';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
-const client = new ApolloClient({
-  cache: new InMemoryCache()
-});
+
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -27,12 +24,10 @@ const App = () => {
     }
   }
   return (
-    <ApolloProvider client={client}>
       <div>
         <Navbar setCurrentPage={setCurrentPage} />
         {renderPage()}
       </div>
-    </ApolloProvider>
   );
 };
 
