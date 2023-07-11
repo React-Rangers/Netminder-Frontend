@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const ADD_TASK = gql`
     mutation Mutation($taskDescription: String!, $contactFirstName: String!, $contactLastName: String!, $reminderDate: String!, $contactPhone: String, $contactEmail: String) {
