@@ -1,22 +1,20 @@
 import React from 'react'
 import { Table } from 'antd'
 import { useQuery } from '@apollo/client';
+import { USER_TASKS } from '../utils/queries';
 
 function TaskTable() {
-  const query = useQuery(GET_TASKS);
-  const dataSource = [
-    {
-      key: query._id,
-      contactEmail: query.contactEmail,
-      contactFirstName: query.contactFirstName,
-      contactLastName: query.contactLastName,
-      contactPhoneNumber: query.contactPhoneNumber,
-      reminderDate: query.reminderDate,
-      taskDescription: query.taskDescription,
-    },
-  
-  ];
-
+  const query = useQuery(USER_TASKS);
+  const dataSource = query.map(task => ({
+    key: task._id,
+    contactEmail: task.contactEmail,
+    contactFirstName: task.contactFirstName,
+    contactLastName: task.contactLastName,
+    contactPhoneNumber: task.contactPhoneNumber,
+    reminderDate: task.reminderDate,
+    taskDescription: task.taskDescription,
+  }));
+console.log(dataSource)
   const columns = [
     {
       title: 'Contact To Email',
