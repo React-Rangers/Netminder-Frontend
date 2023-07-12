@@ -4,8 +4,8 @@ import { useQuery } from '@apollo/client';
 import { USER_TASKS } from '../utils/queries';
 
 function TaskTable() {
-  const query = useQuery(USER_TASKS);
-  const dataSource = query.map(task => ({
+  const tasks = useQuery(USER_TASKS);
+  const dataSource = tasks.map(task => ({
     key: task._id,
     contactEmail: task.contactEmail,
     contactFirstName: task.contactFirstName,
