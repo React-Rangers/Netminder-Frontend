@@ -48,7 +48,7 @@ const Task = () => {
         <form>
 
             <div className='mb-3'>
-                <label for='description' className='form-label'>What sort of networking do you need to do?</label>
+                <label htmlFor='description' className='form-label'>What sort of networking do you need to do?</label>
                 <input
                     value={description}
                     name='description'
@@ -60,7 +60,7 @@ const Task = () => {
             </div>
 
             <div className='mb-3'>
-                <label for='first-name' className='form-label'>What's their first name?</label>
+                <label htmlFor='first-name' className='form-label'>What's their first name?</label>
                 <input
                     value={firstName}
                     name='firstName'
@@ -72,7 +72,7 @@ const Task = () => {
             </div>
 
             <div className='mb-3'>
-                <label for='last-name' className='form-label'>What is their last name?</label>
+                <label htmlFor='last-name' className='form-label'>What is their last name?</label>
                 <input
                     value={lastName}
                     name='lastName'
@@ -84,7 +84,7 @@ const Task = () => {
             </div>
 
             <div className='mb-3'>
-                <label for='phone-number' className='form-label'>What is their phone number?</label>
+                <label htmlFor='phone-number' className='form-label'>What is their phone number?</label>
                 <input
                     value={phoneNumber}
                     name='phoneNumber'
@@ -96,7 +96,7 @@ const Task = () => {
             </div>
 
             <div className='mb-3'>
-                <label for='email-address' className='form-label'>What is their email address?</label>
+                <label htmlFor='email-address' className='form-label'>What is their email address?</label>
                 <input
                     value={emailAddress}
                     name='emailAddress'
@@ -108,7 +108,7 @@ const Task = () => {
             </div>
 
             <div className='mb-3'>
-                <label for='contact-date' className='form-label'>When do you need to contact them?</label>
+                <label htmlFor='contact-date' className='form-label'>When do you need to contact them?</label>
                 <input
                     value={contactDate}
                     name='contactDate'
@@ -119,7 +119,7 @@ const Task = () => {
                 />
             </div>
 
-            <button type='submit' className='btn btn-primary' onClick={handleFormSubmit}>Submit</button>
+            <button type='submit' className='btn btn-primary' onClick={handleFormSubmit()}>Submit</button>
 
             {error && (
                 <div>

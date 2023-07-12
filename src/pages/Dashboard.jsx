@@ -17,7 +17,7 @@ const Dashboard = () => {
       </body>
       <column>
         <div>
-          {/* <TaskTable /> */}
+          <TaskTable />
         </div>
       </column>
       <column>
