@@ -1,14 +1,14 @@
-// import CalendarDisplay from '../components/Calendar';
+import CalendarDisplay from '../components/Calendar';
 import TaskTable from '../components/TaskTable'
 import DatePickerDisplay from '../components/Datepicker'
 
 const Dashboard = () => {
   return (
     <section>
-      <div>
-        <p>
+      <div className='dashboard-header'>
+        <h1>
           Dashboard
-        </p>
+        </h1>
       </div>
       <body>
         <div>
@@ -22,7 +22,7 @@ const Dashboard = () => {
       </column>
       <column>
         <div>
-          <DatePickerDisplay />
+          {/* <DatePickerDisplay /> */}
         </div>
       </column>
     </section>
@@ -30,5 +30,3 @@ const Dashboard = () => {
 }
 
 export default Dashboard
-
-
