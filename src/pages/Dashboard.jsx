@@ -1,5 +1,6 @@
 import CalendarDisplay from '../components/Calendar';
 import TaskTable from '../components/TaskTable'
+import Task from './TaskForm'
 
 const Dashboard = () => {
   return (
@@ -7,7 +8,8 @@ const Dashboard = () => {
       <div className='dashboard-header'>
         <h1>
           Dashboard
-        </h1>
+</h1>
+      <Task />
       </div>
       <body>
         <div>
@@ -16,7 +18,7 @@ const Dashboard = () => {
       </body>
       <column>
         <div>
-          <TaskTable />
+          {/* <TaskTable /> */}
         </div>
       </column>
     </section>

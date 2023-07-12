@@ -5,16 +5,16 @@ import { USER_TASKS } from '../utils/queries';
 
 function TaskTable() {
   const tasks = useQuery(USER_TASKS);
-  const dataSource = tasks.map(task => ({
-    key: task._id,
-    contactEmail: task.contactEmail,
-    contactFirstName: task.contactFirstName,
-    contactLastName: task.contactLastName,
-    contactPhoneNumber: task.contactPhoneNumber,
-    reminderDate: task.reminderDate,
-    taskDescription: task.taskDescription,
+  console.log('tasks -> ', tasks);
+  const dataSource = tasks.data.profile.task.map(task => ({
+    key: task.data.profile._id,
+    contactEmail: task.data.profile.contactEmail,
+    contactFirstName: task.data.profile.contactFirstName,
+    contactLastName: task.data.profile.contactLastName,
+    contactPhoneNumber: task.data.profile.contactPhoneNumber,
+    reminderDate: task.data.profile.reminderDate,
+    taskDescription: task.data.profile.taskDescription,
   }));
-  console.log(dataSource)
   const columns = [
     {
       title: 'Contact To Email',
