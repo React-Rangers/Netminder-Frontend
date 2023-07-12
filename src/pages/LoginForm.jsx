@@ -1,25 +1,27 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 const LoginForm = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const [profileLogin, { error }] = useMutation(LOGIN)
+    const [profileLogin, { error, data }] = useMutation(LOGIN)
 
     const loginHandler = async (e) => {
         e.preventDefault();
 
         try {
-            await profileLogin({
+            const { data } = await profileLogin({
                 variables: {
                     email,
                     password
                 }
             })
             console.log('Succesful login!')
+            Auth.login(data.login.token);
         } catch (err) {
             console.error(err);
         }

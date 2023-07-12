@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_TASK } from '../utils/mutations';
 
-const Task = () => {
+const TaskForm = () => {
     // The states that will access the form data
     const [description, setDescription] = useState();
     const [firstName, setFirstName] = useState();
@@ -131,4 +131,4 @@ const Task = () => {
     )
 }
 
-export default Task
+export default TaskForm

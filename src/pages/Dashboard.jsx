@@ -1,33 +1,33 @@
 // import CalendarDisplay from '../components/Calendar';
 import TaskTable from '../components/TaskTable'
 import DatePickerDisplay from '../components/Datepicker'
-import Task from './TaskForm'
+import TaskForm from './TaskForm'
 
 const Dashboard = () => {
   return (
-    <section>
+    // <section>
       <div>
         <p>
           Dashboard
         </p>
-      <Task />
+      <TaskForm />
       </div>
-      <body>
-        <div>
-          {/* <CalendarDisplay /> */}
-        </div>
-      </body>
-      <column>
-        <div>
-          {/* <TaskTable /> */}
-        </div>
-      </column>
-      <column>
-        <div>
-          {/* <DatePickerDisplay /> */}
-        </div>
-      </column>
-    </section>
+    //    <body>
+    //     <div>
+    //       <CalendarDisplay />
+    //     </div>
+    //   </body>
+    //   <column>
+    //     <div>
+    //       <TaskTable />
+    //     </div>
+    //   </column>
+    //   <column>
+    //     <div>
+    //       <DatePickerDisplay />
+    //     </div>
+    //   </column>
+    // </section>
   )
 }
 
