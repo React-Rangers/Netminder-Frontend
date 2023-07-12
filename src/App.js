@@ -5,9 +5,6 @@ import Dashboard from './pages/Dashboard';
 import LoginForm from './pages/LoginForm';
 import SignUpForm from './pages/SignUpForm';
 import Task from './pages/TaskForm';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
-
-
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
