@@ -17,16 +17,16 @@ const Task = () => {
     const handleFormSubmit = async (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
-
+        console.log('click', 'desc -> ', description);
         try {
-            const { data } = await addTask({
+            await addTask({
                 variable: {
-                    description,
-                    firstName,
-                    lastName,
-                    phoneNumber,
-                    emailAddress,
-                    contactDate
+                    taskDescription: description,
+                    contactFirstName: firstName,
+                    contactLastName: lastName,
+                    contactPhone: phoneNumber,
+                    contactEmail: emailAddress,
+                    reminderDate: contactDate
                 }
             })
             //reference code (activity 15 week 21) has this, which reloads the page, but i'm using state to set the form back to "", so it isn't necessairy?
@@ -119,7 +119,7 @@ const Task = () => {
                 />
             </div>
 
-            <button type='submit' className='btn btn-primary' onClick={handleFormSubmit()}>Submit</button>
+            <button type='submit' className='btn btn-primary' onClick={handleFormSubmit}>Submit</button>
 
             {error && (
                 <div>
