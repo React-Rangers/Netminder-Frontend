@@ -6,15 +6,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.main-section {
-  text-align: center;
+.main-section, .dashboard-header {
   display: block;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .main-section .main-logo {
   max-height: 200px;
+}
+
+.login-section, .signup-section, .task-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 400px;
 }
 
 code {

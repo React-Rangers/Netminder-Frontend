@@ -1,15 +1,14 @@
-// import CalendarDisplay from '../components/Calendar';
+import CalendarDisplay from '../components/Calendar';
 import TaskTable from '../components/TaskTable'
-import DatePickerDisplay from '../components/Datepicker'
 import Task from './TaskForm'
 
 const Dashboard = () => {
   return (
     <section>
-      <div>
-        <p>
+      <div className='dashboard-header'>
+        <h1>
           Dashboard
-        </p>
+</h1>
       <Task />
       </div>
       <body>
@@ -22,15 +21,8 @@ const Dashboard = () => {
           {/* <TaskTable /> */}
         </div>
       </column>
-      <column>
-        <div>
-          {/* <DatePickerDisplay /> */}
-        </div>
-      </column>
     </section>
   )
 }
 
 export default Dashboard
-
-
