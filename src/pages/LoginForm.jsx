@@ -8,22 +8,24 @@ const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const [profileLogin, { error, data }] = useMutation(LOGIN)
+    const [login, { error, data }] = useMutation(LOGIN)
 
     const loginHandler = async (e) => {
         e.preventDefault();
+        console.log('email -> ', email, '      pw -> ', password);
 
         try {
-            const { data } = await profileLogin({
+            const { data } = await login({
                 variables: {
                     email,
                     password
                 }
             })
-            console.log('Succesful login!')
+            console.log('data -> ', data)
             Auth.login(data.login.token);
+            console.log('Succesful login!')
         } catch (err) {
-            console.error(err);
+            console.error('Login error: ', err.response.data);
         }
     }
 
