@@ -4,8 +4,7 @@ import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
 import LoginForm from './pages/LoginForm';
 import SignUpForm from './pages/SignUpForm';
-
-
+import Task from './pages/TaskForm';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -21,6 +20,9 @@ const App = () => {
     }
     if (currentPage === 'SignUpForm') {
       return <SignUpForm />
+    }
+    if (currentPage === 'Task') {
+      return <Task />
     }
   }
   return (
