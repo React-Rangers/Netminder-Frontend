@@ -4,7 +4,6 @@ import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const LoginForm = () => {
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -30,9 +29,9 @@ const LoginForm = () => {
     }
 
     return (
-        <>
-            <h3>Login</h3>
+        <div className='login-section'>
             <form>
+                <h3>Login</h3>
                 <div className='mb-3'>
                     <label htmlFor='exampleInputEmail1' className='form-label'>Email address</label>
                     <input
@@ -53,17 +52,14 @@ const LoginForm = () => {
                         onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
-
-                <button type='submit' className='btn btn-primary' onClick={loginHandler}>Submit</button>
-
+                <button type='submit' className='btn btn-danger' onClick={loginHandler}>Submit</button>
                 {error && (
                     <div>
                         Something went wrong... 😭
                     </div>
                 )}
             </form>
-
-        </>
+        </div>
     )
 }
 
