@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import { Table } from 'antd';
 import { useQuery } from '@apollo/client';
 import { USER_TASKS } from '../utils/queries';
+import dayjs from 'dayjs';
 
 const TaskTable = () => {
     //const [taskList, setTaskList] = useState([]);
     const { loading, data } = useQuery(USER_TASKS);
     console.log('data -> ', data);
     const dataSource = data ? data.me.tasks.map(task => ({
-        key: data.me.tasks._id,
-        contactEmail: data.me.tasks.contactEmail,
-        contactFirstName: data.me.tasks.contactFirstName,
-        contactLastName: data.me.tasks.contactLastName,
-        contactPhoneNumber: data.me.tasks.contactPhoneNumber,
-        reminderDate: data.me.tasks.reminderDate,
-        taskDescription: data.me.tasks.taskDescription,
+        key: task._id,
+        contactEmail: task.contactEmail,
+        contactFirstName: task.contactFirstName,
+        contactLastName: task.contactLastName,
+        contactPhoneNumber: task.contactPhone,
+        reminderDate: task.reminderDate,
+        taskDescription: task.taskDescription,
       })) : [];
 
     // Define the table columns
