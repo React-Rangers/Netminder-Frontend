@@ -1,12 +1,12 @@
 import { gql } from '@apollo/client';
 
 export const ADD_TASK = gql`
-    mutation Mutation($taskDescription: String!, $contactFirstName: String!, $contactLastName: String!, $reminderDate: String!, $contactPhone: String, $contactEmail: String) {
-        addTask(taskDescription: $taskDescription, contactFirstName: $contactFirstName, contactLastName: $contactLastName, reminderDate: $reminderDate, contactPhone: $contactPhone, contactEmail: $contactEmail) {
-        _id
-        taskDescription
-    }
+  mutation Mutation($profileId: ID!, $taskDescription: String!, $contactFirstName: String!, $contactLastName: String!, $reminderDate: String!, $contactPhone: String, $contactEmail: String) {
+    addTask(profileId: $profileId, taskDescription: $taskDescription, contactFirstName: $contactFirstName, contactLastName: $contactLastName, reminderDate: $reminderDate, contactPhone: $contactPhone, contactEmail: $contactEmail) {
+      _id
+      taskDescription
   }
+}
 `
 
 export const ADD_PROFILE = gql`
