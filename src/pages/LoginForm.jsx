@@ -52,7 +52,7 @@ const LoginForm = () => {
                         onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
-                <button type='submit' className='btn btn-primary' onClick={loginHandler}>Submit</button>
+                <button type='submit' className='btn btn-danger' onClick={loginHandler}>Submit</button>
                 {error && (
                     <div>
                         Something went wrong... 😭

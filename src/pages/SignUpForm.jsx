@@ -61,7 +61,7 @@ const SignUpForm = () => {
                         onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
-                <button type='submit' className='btn btn-primary' onClick={signUpSubmitHandler}>Submit</button>
+                <button type='submit' className='btn btn-danger' onClick={signUpSubmitHandler}>Submit</button>
                 {error && (
                     <div>
                         Something went wrong... 😭
