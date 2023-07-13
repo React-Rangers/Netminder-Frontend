@@ -3,7 +3,6 @@ import { useMutation } from '@apollo/client';
 import { ADD_PROFILE } from '../utils/mutations';
 
 const SignUpForm = () => {
-
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -29,9 +28,9 @@ const SignUpForm = () => {
     }
 
     return (
-        <>
-            <h3>Sign Up</h3>
+        <div className='signup-section'>
             <form>
+                <h3>Sign Up</h3>
                 <div className='mb-3'>
                     <label htmlFor='inputUsernameSignUp' className='form-label'>Username</label>
                     <input
@@ -42,7 +41,6 @@ const SignUpForm = () => {
                         onChange={(event) => setUsername(event.target.value)}
                     />
                 </div>
-
                 <div className='mb-3'>
                     <label htmlFor='inputEmailSignup' className='form-label'>Email address</label>
                     <input
@@ -53,7 +51,6 @@ const SignUpForm = () => {
                         onChange={(event) => setEmail(event.target.value)}
                     />
                 </div>
-
                 <div className='mb-3'>
                     <label htmlFor='inputPasswordSignUp' className='form-label'>Password</label>
                     <input
@@ -64,16 +61,14 @@ const SignUpForm = () => {
                         onChange={(event) => setPassword(event.target.value)}
                     />
                 </div>
-
-                <button type='submit' className='btn btn-primary' onClick={signUpSubmitHandler}>Submit</button>
-
+                <button type='submit' className='btn btn-danger' onClick={signUpSubmitHandler}>Submit</button>
                 {error && (
                     <div>
                         Something went wrong... 😭
                     </div>
                 )}
             </form>
-        </>
+        </div>
     )
 }
 
