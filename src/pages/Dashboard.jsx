@@ -8,8 +8,8 @@ const Dashboard = () => {
       <div className='dashboard-header'>
         <h1>
           Dashboard
-</h1>
-      <Task />
+        </h1>
+        {/* <Task /> */}
       </div>
       <body>
         <div>
@@ -18,7 +18,7 @@ const Dashboard = () => {
       </body>
       <column>
         <div>
-          {/* <TaskTable /> */}
+          <TaskTable />
         </div>
       </column>
     </section>
