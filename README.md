@@ -10,7 +10,9 @@ On the front end, we used React, Apollo Client, Ant Design, and JSX. On the back
 
 ## Usage
 
+When you
 
+![Screenshot](./src/images/netminder-screenshot.png)
 
 ## Credits
 
