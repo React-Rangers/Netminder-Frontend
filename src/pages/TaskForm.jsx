@@ -76,11 +76,11 @@ const Task = () => {
                     {/* <DatepickerDisplay /> */}
                     <input
                         value={contactDate}
-                        name='firstName'
+                        name='contactDate'
                         onChange={(event) => setContactDate(event.target.value)}
                         className='form-control'
                         id='last-name'
-                        placeholder='Alex'
+                        placeholder='10/10/1010'
                     />
                 </div>
                 <div className='mb-3'>
