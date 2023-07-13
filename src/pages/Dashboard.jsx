@@ -1,27 +1,17 @@
-import CalendarDisplay from '../components/Calendar';
 import TaskTable from '../components/TaskTable'
-import Task from './TaskForm'
 
 const Dashboard = () => {
   return (
-    <section>
+    <div>
       <div className='dashboard-header'>
         <h1>
           Dashboard
         </h1>
-        {/* <Task /> */}
       </div>
-      <body>
-        <div>
-          {/* <CalendarDisplay /> */}
-        </div>
-      </body>
-      <column>
-        <div>
-          <TaskTable />
-        </div>
-      </column>
-    </section>
+      <div>
+        <TaskTable />
+      </div>
+    </div>
   )
 }
 
