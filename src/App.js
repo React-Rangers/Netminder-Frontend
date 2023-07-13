@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import LoginForm from './pages/LoginForm';
 import SignUpForm from './pages/SignUpForm';
 import Task from './pages/TaskForm';
+import Footer from './components/Footer';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -26,10 +27,13 @@ const App = () => {
     }
   }
   return (
+    <>
       <div>
         <Navbar setCurrentPage={setCurrentPage} />
         {renderPage()}
       </div>
+      <Footer />
+    </>
   );
 };
 

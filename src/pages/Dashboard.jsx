@@ -1,17 +1,19 @@
+import Task from './TaskForm'
 import TaskTable from '../components/TaskTable'
 
 const Dashboard = () => {
   return (
-    <div>
-      <div className='dashboard-header'>
-        <h1>
-          Dashboard
-        </h1>
+    <>
+      <br></br>
+      <div className='dashboard-container'>
+        <div className='task-form-section'>
+          <Task />
+        </div>
+        <div className='task-table-section'>
+          <TaskTable />
+        </div>
       </div>
-      <div>
-        <TaskTable />
-      </div>
-    </div>
+    </>
   )
 }
 
