@@ -10,7 +10,7 @@ On the front end, we used React, Apollo Client, Ant Design, and JSX. On the back
 
 ## Usage
 
-When you
+When you sign up or log in, you can access to the Dashboard where you can create a task and then see tasks that have already been created inside the task table. You can also access the team page to learn more about each member of the team that made this site.
 
 ![Screenshot](./src/images/netminder-screenshot.png)
 

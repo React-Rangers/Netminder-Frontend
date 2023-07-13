@@ -14,6 +14,7 @@ const Navbar = ({ setCurrentPage }) => {
             <a onClick={() => setCurrentPage('SignUpForm')} className='nav-link' href='#'>Sign Up</a>
             <a onClick={() => setCurrentPage('LoginForm')} className='nav-link' href='#'>Login</a>
             <a onClick={() => setCurrentPage('Dashboard')} className='nav-link' href='#'>Dashboard</a>
+            <a onClick={() => setCurrentPage('Team')} className='nav-link' href='#'>Team</a>
           </div>
         </div>
       </div>

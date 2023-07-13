@@ -16,13 +16,20 @@ body {
   text-align: center;
 }
 
-.main-section .main-logo {
+.main-logo {
   max-height: 200px;
 }
 
 .login-section,
 .signup-section {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.team-section {
+  display: grid;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -45,6 +52,94 @@ body {
   margin-right: 50px;
 }
 
+.team-row-container-one,
+.team-row-container-two {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-flow: row;
+}
+
+.team-member-ryan,
+.team-member-halima,
+.team-members,
+.team-member-kar,
+.team-member-jessie,
+.team-member-rachel {
+  margin: 10px;
+}
+
+.team-member-ryan-photo {
+  max-height: 250px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%;
+  border-color: #00a651;
+}
+
+.team-member-ryan-text {
+  color: #00a651;
+}
+
+.team-logo {
+  max-height: 250px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #000000;
+}
+
+.team-text {
+  color: #000000;
+}
+
+.team-member-jessie-photo {
+  max-height: 250px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%;
+  border-color: #0000ff;
+}
+
+.team-member-jessie-text {
+  color: #0000ff;
+}
+
+.team-member-halima-photo {
+  max-height: 250px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%;
+  border-color: #92278f;
+}
+
+.team-member-halima-text {
+  color: #92278f;
+}
+
+.team-member-rachel-photo {
+  max-height: 250px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%;
+  border-color: #ff00ff;
+}
+
+.team-member-rachel-text {
+  color: #ff00ff;
+}
+
+.team-member-kar-photo {
+  max-height: 250px;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%;
+  border-color: #ff0000;
+}
+
+.team-member-kar-text {
+  color: #ff0000;
+}
+
 .footer {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -54,6 +149,7 @@ body {
   bottom: 0;
   width: 100%;
   text-align: center;
+  background-color: white;
 }
 
 code {

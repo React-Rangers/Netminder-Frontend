@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation, useQuery } from '@apollo/client';
 import { ADD_TASK } from '../utils/mutations';
 import { ME_QUERY } from '../utils/queries';
-import DatepickerDisplay from '../components/Datepicker'
+import { DatePicker } from 'antd'
 
 
 const Task = () => {
@@ -73,14 +73,13 @@ const Task = () => {
                 </div>
                 <div className='mb-3'>
                     <label htmlFor='contact-date' className='form-label'>When do you need to do this task?</label>
-                    {/* <DatepickerDisplay /> */}
                     <input
                         value={contactDate}
                         name='contactDate'
                         onChange={(event) => setContactDate(event.target.value)}
                         className='form-control'
-                        id='last-name'
-                        placeholder='10/10/1010'
+                        id='contact-date'
+                        placeholder='1900/01/01'
                     />
                 </div>
                 <div className='mb-3'>
