@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import LoginForm from './pages/LoginForm';
 import SignUpForm from './pages/SignUpForm';
 import Task from './pages/TaskForm';
+import Footer from './components/Footer';
 
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
