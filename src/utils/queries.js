@@ -19,19 +19,11 @@ export const USER_TASKS = gql`
 `
 export const ME_QUERY = gql`
 query Me {
-    me {
-      username
-      tasks {
-        reminderDate
-        type
-        taskDescription
-        dateCreated
-        contactPhone
-        contactLastName
-        contactFirstName
-        contactEmail
-        _id
-      }
-    }
+  me {
+    _id
+    username
+    email
+    password
   }
+}
 `

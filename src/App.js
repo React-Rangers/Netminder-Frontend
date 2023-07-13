@@ -9,7 +9,7 @@ import Task from './pages/TaskForm';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-const url = process.env.NODE_ENV === 'development' ? '/graphql' : 'https://'
+const url = 'http://www.localhost:3001/graphql'
 const httpLink = createHttpLink({ uri: url });
 
 const authLink = setContext((_, { headers }) => {

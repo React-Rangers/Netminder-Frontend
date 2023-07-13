@@ -3,7 +3,7 @@ import { useMutation, useQuery } from '@apollo/client';
 import { ADD_TASK } from '../utils/mutations';
 import { ME_QUERY } from '../utils/queries';
 
-const Task = ({ profileId }) => {
+const Task = () => {
     
     // The states that will access the form data
     const [description, setDescription] = useState();
@@ -32,13 +32,12 @@ const Task = ({ profileId }) => {
             console.log('profileData -> ', profileData);
             const data = await addTask({
                 variables: {
-                    profileId: profileData._id,
-                    taskDescription: description,
-                    contactFirstName: firstName,
-                    contactLastName: lastName,
-                    reminderDate: contactDate,
-                    contactPhone: phoneNumber,
-                    contactEmail: emailAddress
+                        taskDescription: description,
+                        contactFirstName: firstName,
+                        contactLastName: lastName,
+                        reminderDate: contactDate,
+                        contactEmail: emailAddress,
+                        contactPhone: phoneNumber
                 }
             })
             console.log('data -> ', data);
