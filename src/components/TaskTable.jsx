@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { Table } from 'antd';
+import { useQuery } from '@apollo/client';
+import { USER_TASKS } from '../utils/queries';
 
 const TaskTable = () => {
-    const [taskList, setTaskList] = useState([]);
+    //const [taskList, setTaskList] = useState([]);
+    const { loading, data } = useQuery(USER_TASKS);
+    console.log('data -> ', data);
+    const dataSource = data ? data.me.tasks.map(task => ({
+        key: data.me.tasks._id,
+        contactEmail: data.me.tasks.contactEmail,
+        contactFirstName: data.me.tasks.contactFirstName,
+        contactLastName: data.me.tasks.contactLastName,
+        contactPhoneNumber: data.me.tasks.contactPhoneNumber,
+        reminderDate: data.me.tasks.reminderDate,
+        taskDescription: data.me.tasks.taskDescription,
+      })) : [];
 
     // Define the table columns
     const columns = [
@@ -48,13 +61,13 @@ const TaskTable = () => {
         }
     ];
 
-    const dataSource = taskList.map((task, index) => ({ ...task, key: index.toString() }));
+
 
     return (
         <div className='task-table'>
             <h3>Current Tasks</h3>
             {/* Render the task table */}
-            <Table dataSource={taskList} columns={columns} />
+            <Table dataSource={dataSource} columns={columns} />
         </div>
     );
 };

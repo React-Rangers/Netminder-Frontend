@@ -7,6 +7,27 @@ import SignUpForm from './pages/SignUpForm';
 import Team from './pages/Team';
 import Footer from './components/Footer';
 
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
+const url = 'http://www.localhost:3001/graphql'
+const httpLink = createHttpLink({ uri: url });
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    }
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache()
+});
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
   function renderPage() {
@@ -27,13 +48,12 @@ const App = () => {
     }
   }
   return (
-    <>
+    <ApolloProvider client={client}>
       <div>
         <Navbar setCurrentPage={setCurrentPage} />
         {renderPage()}
       </div>
-      <Footer />
-    </>
+    </ApolloProvider>
   );
 };
 
