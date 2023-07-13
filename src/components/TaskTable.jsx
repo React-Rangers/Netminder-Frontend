@@ -11,8 +11,13 @@ const TaskTable = () => {
             children: [
                 {
                     title: 'Task',
-                    dataIndex: 'taskType',
-                    key: 'taskType'
+                    dataIndex: 'taskDescription',
+                    key: 'taskDescription'
+                },
+                {
+                    title: 'Date',
+                    dataIndex: 'reminderDate',
+                    key: 'reminderDate'
                 }
             ]
         },
@@ -38,21 +43,6 @@ const TaskTable = () => {
                     title: 'Email',
                     dataIndex: 'contactEmail',
                     key: 'contactEmail'
-                }
-            ]
-        },
-        {
-            title: 'Other',
-            children: [
-                {
-                    title: 'Date',
-                    dataIndex: 'reminderDate',
-                    key: 'reminderDate'
-                },
-                {
-                    title: 'Description',
-                    dataIndex: 'taskDescription',
-                    key: 'taskDescription'
                 }
             ]
         }

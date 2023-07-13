@@ -8,11 +8,11 @@ const Task = ({ profileId }) => {
 
     // The states that will access the form data
     const [description, setDescription] = useState();
+    const [contactDate, setContactDate] = useState();
     const [firstName, setFirstName] = useState();
     const [lastName, setLastName] = useState();
     const [phoneNumber, setPhoneNumber] = useState();
     const [emailAddress, setEmailAddress] = useState();
-    const [contactDate, setContactDate] = useState();
 
     const [addTask, { error }] = useMutation(ADD_TASK);
     const { loading, profileData } = useQuery(ME_QUERY);
@@ -21,22 +21,23 @@ const Task = ({ profileId }) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
         console.log('description -> ', description);
+        console.log('contactDate -> ', contactDate);
         console.log('firstName -> ', firstName);
         console.log('lastName -> ', lastName);
         console.log('emailAddress -> ', emailAddress);
         console.log('phoneNumber -> ', phoneNumber);
-        console.log('contactDate -> ', contactDate);
+
         try {
             console.log('profileData -> ', profileData);
             const data = await addTask({
                 variables: {
                     profileId: profileData._id,
                     taskDescription: description,
+                    reminderDate: contactDate,
                     contactFirstName: firstName,
                     contactLastName: lastName,
                     contactPhone: phoneNumber,
-                    contactEmail: emailAddress,
-                    reminderDate: contactDate
+                    contactEmail: emailAddress
                 }
             })
             console.log('data -> ', data);
@@ -48,11 +49,11 @@ const Task = ({ profileId }) => {
 
         //setting states back to default (?)
         setDescription('');
+        setContactDate('');
         setFirstName('');
         setLastName('');
         setPhoneNumber('');
         setEmailAddress('');
-        setContactDate('');
     };
 
     return (
@@ -69,6 +70,10 @@ const Task = ({ profileId }) => {
                         id='task-name'
                         placeholder='Make a call, Send an email, etc.'
                     />
+                </div>
+                <div className='mb-3'>
+                    <label htmlFor='contact-date' className='form-label'>When do you need to do this task?</label>
+                    <DatepickerDisplay />
                 </div>
                 <div className='mb-3'>
                     <label htmlFor='first-name' className='form-label'>Who would you like to collaborate with? What is their first name?</label>
@@ -113,10 +118,6 @@ const Task = ({ profileId }) => {
                         id='email-address'
                         placeholder='email@email.com'
                     />
-                </div>
-                <div className='mb-3'>
-                    <label htmlFor='contact-date' className='form-label'>When do you need to contact them?</label>
-                    <DatepickerDisplay />
                 </div>
                 <button type='submit' className='btn btn-danger' onClick={handleFormSubmit}>Submit</button>
                 {error && (
