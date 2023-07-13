@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import LoginForm from './pages/LoginForm';
 import SignUpForm from './pages/SignUpForm';
 import Task from './pages/TaskForm';
+import Footer from './components/Footer';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -31,9 +32,7 @@ const App = () => {
         <Navbar setCurrentPage={setCurrentPage} />
         {renderPage()}
       </div>
-      <footer className='footer'>
-        &copy; 2023 React Rangers. All rights reserved.
-      </footer>
+      <Footer />
     </>
   );
 };

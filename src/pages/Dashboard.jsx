@@ -1,5 +1,5 @@
-import Task from './JaskForm'
-import TaskTable from '../components/JaskTable'
+import Task from './TaskForm'
+import TaskTable from '../components/TaskTable'
 
 const Dashboard = () => {
   return (
