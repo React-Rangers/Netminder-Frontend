@@ -26,10 +26,15 @@ const App = () => {
     }
   }
   return (
+    <>
       <div>
         <Navbar setCurrentPage={setCurrentPage} />
         {renderPage()}
       </div>
+      <footer className='footer'>
+        &copy; 2023 React Rangers. All rights reserved.
+      </footer>
+    </>
   );
 };
 

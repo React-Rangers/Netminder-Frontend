@@ -1,21 +1,19 @@
-import Task from './TaskForm'
-// import TaskTable from '../components/TaskTable'
+import Task from './JaskForm'
+import TaskTable from '../components/JaskTable'
 
 const Dashboard = () => {
   return (
-    <div>
-      <div className='dashboard-header'>
-        <h3>Create a Task</h3>
-      </div>
-      <div className='task-section'>
-        <Task />
-      </div>
+    <>
       <br></br>
-      <div className='current-tasks'>
-        <h3>Current Tasks</h3>
-        {/* <TaskTable /> */}
+      <div className='dashboard-container'>
+        <div className='task-form-section'>
+          <Task />
+        </div>
+        <div className='task-table-section'>
+          <TaskTable />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

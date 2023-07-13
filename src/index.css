@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.main-section, .dashboard-header, .current-tasks {
+.main-section,
+.task-form,
+.task-table {
   display: block;
   justify-content: center;
   align-items: center;
@@ -18,10 +20,39 @@ body {
   max-height: 200px;
 }
 
-.login-section, .signup-section, .task-section {
+.login-section,
+.signup-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.task-form-section {
+  flex: 1;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.task-table-section {
+  flex: 2;
+  margin-right: 50px;
+}
+
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: fixed;
+  margin-top: 45px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
 
