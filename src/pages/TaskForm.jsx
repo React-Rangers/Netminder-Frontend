@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { ADD_TASK } from '../utils/mutations';
+import { ME_QUERY } from '../utils/queries';
 
-const Task = () => {
+const Task = ({ profileId }) => {
+    
     // The states that will access the form data
     const [description, setDescription] = useState();
     const [firstName, setFirstName] = useState();
@@ -13,22 +15,33 @@ const Task = () => {
 
 
     const [addTask, { error }] = useMutation(ADD_TASK);
+    const { loading, profileData } = useQuery(ME_QUERY);
+
 
     const handleFormSubmit = async (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
-        console.log('click', 'desc -> ', description);
+        console.log('description -> ', description);
+        console.log('firstName -> ', firstName);
+        console.log('lastName -> ', lastName);
+        console.log('emailAddress -> ', emailAddress);
+        console.log('phoneNumber -> ', phoneNumber);
+        console.log('contactDate -> ', contactDate);
+        
         try {
-            await addTask({
-                variable: {
+            console.log('profileData -> ', profileData);
+            const data = await addTask({
+                variables: {
+                    profileId: profileData._id,
                     taskDescription: description,
                     contactFirstName: firstName,
                     contactLastName: lastName,
+                    reminderDate: contactDate,
                     contactPhone: phoneNumber,
-                    contactEmail: emailAddress,
-                    reminderDate: contactDate
+                    contactEmail: emailAddress
                 }
             })
+            console.log('data -> ', data);
             //reference code (activity 15 week 21) has this, which reloads the page, but i'm using state to set the form back to "", so it isn't necessairy?
             //window.location.reload();
         } catch (err) {
@@ -126,6 +139,14 @@ const Task = () => {
                     Something went wrong... 😭
                 </div>
             )}
+
+            {!loading && (
+                <div>
+                    {profileData}
+                </div>
+            )
+
+            }
 
         </form>
     )
