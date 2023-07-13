@@ -4,8 +4,9 @@ import { ADD_TASK } from '../utils/mutations';
 import { ME_QUERY } from '../utils/queries';
 import DatepickerDisplay from '../components/Datepicker'
 
-const Task = ({ profileId }) => {
 
+const Task = () => {
+    
     // The states that will access the form data
     const [description, setDescription] = useState();
     const [contactDate, setContactDate] = useState();
@@ -31,11 +32,10 @@ const Task = ({ profileId }) => {
             console.log('profileData -> ', profileData);
             const data = await addTask({
                 variables: {
-                    profileId: profileData._id,
                     taskDescription: description,
-                    reminderDate: contactDate,
                     contactFirstName: firstName,
                     contactLastName: lastName,
+                    reminderDate: contactDate,
                     contactPhone: phoneNumber,
                     contactEmail: emailAddress
                 }
@@ -73,7 +73,15 @@ const Task = ({ profileId }) => {
                 </div>
                 <div className='mb-3'>
                     <label htmlFor='contact-date' className='form-label'>When do you need to do this task?</label>
-                    <DatepickerDisplay />
+                    {/* <DatepickerDisplay /> */}
+                    <input
+                        value={contactDate}
+                        name='contactDate'
+                        onChange={(event) => setContactDate(event.target.value)}
+                        className='form-control'
+                        id='last-name'
+                        placeholder='10/10/1010'
+                    />
                 </div>
                 <div className='mb-3'>
                     <label htmlFor='first-name' className='form-label'>Who would you like to collaborate with? What is their first name?</label>
