@@ -24,7 +24,7 @@ const LoginForm = () => {
             Auth.login(data.login.token);
             console.log('Succesful login!')
         } catch (err) {
-            console.error('Login error: ', err.response.data);
+            console.error(err);
         }
     }
 
