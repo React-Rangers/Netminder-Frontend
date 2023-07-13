@@ -52,6 +52,7 @@ const App = () => {
       <div>
         <Navbar setCurrentPage={setCurrentPage} />
         {renderPage()}
+        <Footer />
       </div>
     </ApolloProvider>
   );
