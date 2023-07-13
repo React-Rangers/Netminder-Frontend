@@ -10,7 +10,8 @@ import Footer from './components/Footer';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-const url = 'http://www.localhost:3001/graphql'
+const url = process.env.NODE_ENV === 'development'
+  ? '/graphql' : 'https://netminder-backend-33210b05e846.herokuapp.com/graphql'
 const httpLink = createHttpLink({ uri: url });
 
 const authLink = setContext((_, { headers }) => {
