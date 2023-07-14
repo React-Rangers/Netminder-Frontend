@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Table } from 'antd';
-import { useQuery } from '@apollo/client';
-import { USER_TASKS } from '../utils/queries';
-import dayjs from 'dayjs';
+import React, { useState } from 'react'
+import { Table } from 'antd'
+import { useQuery } from '@apollo/client'
+import { USER_TASKS } from '../utils/queries'
+import dayjs from 'dayjs'
 
 const TaskTable = () => {
-    //const [taskList, setTaskList] = useState([]);
-    const { loading, data } = useQuery(USER_TASKS);
-    console.log('data -> ', data);
+    //const [taskList, setTaskList] = useState([])
+    const { loading, data } = useQuery(USER_TASKS)
+    console.log('data -> ', data)
     const dataSource = data ? data.me.tasks.map(task => ({
         key: task._id,
         contactEmail: task.contactEmail,
@@ -15,8 +15,8 @@ const TaskTable = () => {
         contactLastName: task.contactLastName,
         contactPhoneNumber: task.contactPhone,
         reminderDate: task.reminderDate,
-        taskDescription: task.taskDescription,
-      })) : [];
+        taskDescription: task.taskDescription
+    })) : []
 
     // Define the table columns
     const columns = [
@@ -60,9 +60,7 @@ const TaskTable = () => {
                 }
             ]
         }
-    ];
-
-
+    ]
 
     return (
         <div className='task-table'>
@@ -70,7 +68,7 @@ const TaskTable = () => {
             {/* Render the task table */}
             <Table dataSource={dataSource} columns={columns} />
         </div>
-    );
-};
+    )
+}
 
-export default TaskTable;
+export default TaskTable

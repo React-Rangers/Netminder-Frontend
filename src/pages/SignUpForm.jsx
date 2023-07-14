@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { ADD_PROFILE } from '../utils/mutations';
+import React, { useState } from 'react'
+import { useMutation } from '@apollo/client'
+import { ADD_PROFILE } from '../utils/mutations'
 
 const SignUpForm = () => {
-    const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     const [addProfile, { error }] = useMutation(ADD_PROFILE)
 
     const signUpSubmitHandler = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         try {
             await addProfile({
@@ -20,10 +20,10 @@ const SignUpForm = () => {
                     password
                 }
             })
-            console.log('new profile made');
+            console.log('new profile made')
 
         } catch (err) {
-            console.error(err);
+            console.error(err)
         }
     }
 
