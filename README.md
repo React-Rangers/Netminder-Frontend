@@ -16,9 +16,6 @@ When you sign up or log in, you can access to the Dashboard where you can create
 
 ## Credits
 
-Collaborators are [Halima](https://github.com/Halimaxo), [Jessie](https://github.com/MrMessyFace), [Kar](https://github.com/karsodhi), [Rachel](https://github.com/rachelmcallister1), and [Ryan](https://github.com/rjpinks), with [Jen](https://github.com/Jdoyle5254) as our advisor.
+Collaborators are [Halima Shuchi](https://github.com/Halimaxo), [Jessie Galindo](https://github.com/MrMessyFace), [Kar Sodhi](https://github.com/karsodhi), [Rachel McAllister](https://github.com/rachelmcallister1), and [Ryan Pinkston](https://github.com/rjpinks), with [Jen Doyle](https://github.com/Jdoyle5254) as our advisor.
 
-https://github.com/React-Rangers/netminder-frontend
-https://github.com/React-Rangers/netminder-backend
-
-https://netminder-frontend-c2d1f8e64193.herokuapp.com/
+[Front End Repository](https://github.com/React-Rangers/netminder-frontend) | [Back End Repository](https://github.com/React-Rangers/netminder-backend) | [Live App](https://netminder-frontend-c2d1f8e64193.herokuapp.com/)
