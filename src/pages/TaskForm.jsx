@@ -1,35 +1,32 @@
-import React, { useState } from 'react';
-import { useMutation, useQuery } from '@apollo/client';
-import { ADD_TASK } from '../utils/mutations';
-import { ME_QUERY } from '../utils/queries';
-import { DatePicker } from 'antd'
-
+import React, { useState } from 'react'
+import { useMutation, useQuery } from '@apollo/client'
+import { ADD_TASK } from '../utils/mutations'
+import { ME_QUERY } from '../utils/queries'
 
 const Task = () => {
-    
     // The states that will access the form data
-    const [description, setDescription] = useState();
-    const [contactDate, setContactDate] = useState();
-    const [firstName, setFirstName] = useState();
-    const [lastName, setLastName] = useState();
-    const [phoneNumber, setPhoneNumber] = useState();
-    const [emailAddress, setEmailAddress] = useState();
+    const [description, setDescription] = useState()
+    const [contactDate, setContactDate] = useState()
+    const [firstName, setFirstName] = useState()
+    const [lastName, setLastName] = useState()
+    const [phoneNumber, setPhoneNumber] = useState()
+    const [emailAddress, setEmailAddress] = useState()
 
-    const [addTask, { error }] = useMutation(ADD_TASK);
-    const { loading, profileData } = useQuery(ME_QUERY);
+    const [addTask, { error }] = useMutation(ADD_TASK)
+    const { loading, profileData } = useQuery(ME_QUERY)
 
     const handleFormSubmit = async (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
-        e.preventDefault();
-        console.log('description -> ', description);
-        console.log('contactDate -> ', contactDate);
-        console.log('firstName -> ', firstName);
-        console.log('lastName -> ', lastName);
-        console.log('emailAddress -> ', emailAddress);
-        console.log('phoneNumber -> ', phoneNumber);
+        e.preventDefault()
+        console.log('description -> ', description)
+        console.log('contactDate -> ', contactDate)
+        console.log('firstName -> ', firstName)
+        console.log('lastName -> ', lastName)
+        console.log('emailAddress -> ', emailAddress)
+        console.log('phoneNumber -> ', phoneNumber)
 
         try {
-            console.log('profileData -> ', profileData);
+            console.log('profileData -> ', profileData)
             const data = await addTask({
                 variables: {
                     taskDescription: description,
@@ -40,21 +37,19 @@ const Task = () => {
                     contactEmail: emailAddress
                 }
             })
-            console.log('data -> ', data);
-            //reference code (activity 15 week 21) has this, which reloads the page, but i'm using state to set the form back to "", so it isn't necessary?
-            //window.location.reload();
+            console.log('data -> ', data)
         } catch (err) {
-            console.error(err);
+            console.error(err)
         }
 
         //setting states back to default (?)
-        setDescription('');
-        setContactDate('');
-        setFirstName('');
-        setLastName('');
-        setPhoneNumber('');
-        setEmailAddress('');
-    };
+        setDescription('')
+        setContactDate('')
+        setFirstName('')
+        setLastName('')
+        setPhoneNumber('')
+        setEmailAddress('')
+    }
 
     return (
         <div className='task-form'>
